@@ -22,11 +22,11 @@ class ViewController: UIViewController {
           x: 0, y: fullScreenSize.height * 0.3,
           width: fullScreenSize.width, height: 150))
 
-        //將委任對象設置為另一個檔案：新建的 MyViewController.swift 檔案,用來來做為 UIPickerView 的委任對象
-        //新增另一個 UIViewController用來實作委任模式的方法
+        //UIPickerView 的委任對象設置為新建的 MyViewController.swift 檔案
+        //再新增 新建的MyViewController類別的實體,用來實作委任模式的方法
         let myViewController = MyViewController()
 
-        //將這個用來實作委任模式,新增的另一個 UIViewController加入 self就是本身所在的ViewController
+        //依新建的MyViewController類別新增的實體,加入 self就是本身所在的ViewController
         self.addChild(myViewController)
 
         //設定 UIPickerView 的 delegate 及 dataSource
